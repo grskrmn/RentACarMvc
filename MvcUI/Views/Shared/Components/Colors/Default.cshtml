@@ -1,0 +1,8 @@
+@model List<Color>
+<select  class="form-select form-select-lg mb-3" aria-label="Large select example">
+  <option disabled selected>Renk Şeçiniz</option>
+  @foreach(var color in Model)
+  {
+    <option value="@color.Name" >@color.Name</option>
+  }
+</select>
