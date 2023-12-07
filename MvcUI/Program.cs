@@ -1,13 +1,13 @@
-using Business.DepencyResolvers;
-using DataAccess.DepencyResolvers;
+using Business.Extensions;
+using DataAccess.Extensions;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddBusinessDepencyResolvers();
-builder.Services.AddDataAccessDepencyResolvers();
+builder.Services.ConfigureServiceRegistration();
+builder.Services.ConfigureRepositoryRegistration();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

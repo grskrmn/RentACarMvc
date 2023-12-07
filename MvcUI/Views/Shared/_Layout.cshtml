@@ -1,45 +1,30 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-   <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>@ViewData["Title"] - MvcUI</title>
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
-        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-        <link rel="stylesheet" href="~/css/layout.css" asp-append-version="true" />
-        <link rel="stylesheet" href="~/MvcUI.styles.css" asp-append-version="true" />
-    </head>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental - @ViewData["Title"]</title>
+    <link rel="stylesheet" asp-append-version="true" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" asp-append-version="true" href="~/lib/font-awesome/css/all.min.css" />
+    <partial name="_Css" />
+</head>
+
 <body style="min-height: 100vh !important;">
-    @await Html.PartialAsync("~/Views/LayoutPartials/_Header.cshtml")
-    <div class="container-fluid p-0 ">
-        <div  class="row ">
-
-            @if(!IsSectionDefined("Brands") && !IsSectionDefined("Colors"))
-            {
-                <div class="col-md">
-                    @RenderBody()
-                     @await Html.PartialAsync("~/Views/LayoutPartials/_SearchForm.cshtml")
-                </div>
-            }
-            else
-            {
-                <div class="col-md-3">
-                    @await RenderSectionAsync("Brands", required: false)
-                    @await RenderSectionAsync("Colors", required: false)
-                </div>
-                <div class="col-md-9">
-                    @RenderBody()
-                </div>
-            }
+    @await Html.PartialAsync("./Partials/_Navbar.cshtml")
+    @RenderSection("Header", false)
+    @RenderBody()
 
 
-            
-        </div>
-    </div>
-    @await Html.PartialAsync("~/Views/LayoutPartials/_Footer.cshtml")
+    @await Html.PartialAsync("./Partials/_Footer.cshtml")
+
+    <script asp-append-version="true" src="~/lib/dist/jquery.min.js"></script>
+    <script asp-append-version="true" src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script asp-append-version="true" src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
     
-    @await Html.PartialAsync("~/Views/LayoutPartials/_Script.cshtml")
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

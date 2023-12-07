@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hhYPxcYjdFixbhdYib9oyMcVqYyInQk+mcotdNSMpgTcKI2gJ9iRxV7OcC4NzRKYPUPDYElCJ1K8mWO8O7ib7A==",
+  "dgSpecHash": "FxPWL+qnTOtG6Az1KSZBy3A9eJnHDJpyre5oM+ttXfOOsIsZUM1WJyZ989ZlaL8oW9w+Wi2kQ03e8be4jhlmbg==",
   "success": true,
   "projectFilePath": "/workspaces/RentACarMvc/DataAccess/DataAccess.csproj",
   "expectedPackageFiles": [
@@ -8,8 +8,8 @@
     "/home/codespace/.nuget/packages/microsoft.entityframeworkcore/7.0.13/microsoft.entityframeworkcore.7.0.13.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.13/microsoft.entityframeworkcore.abstractions.7.0.13.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.13/microsoft.entityframeworkcore.analyzers.7.0.13.nupkg.sha512",
-    "/home/codespace/.nuget/packages/microsoft.entityframeworkcore.design/7.0.13/microsoft.entityframeworkcore.design.7.0.13.nupkg.sha512",
-    "/home/codespace/.nuget/packages/microsoft.entityframeworkcore.relational/7.0.13/microsoft.entityframeworkcore.relational.7.0.13.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.entityframeworkcore.design/7.0.0/microsoft.entityframeworkcore.design.7.0.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.entityframeworkcore.relational/7.0.0/microsoft.entityframeworkcore.relational.7.0.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.extensions.caching.memory/7.0.0/microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.extensions.configuration.abstractions/7.0.0/microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
@@ -21,9 +21,10 @@
     "/home/codespace/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
-    "/home/codespace/.nuget/packages/npgsql/7.0.6/npgsql.7.0.6.nupkg.sha512",
-    "/home/codespace/.nuget/packages/npgsql.entityframeworkcore.postgresql/7.0.11/npgsql.entityframeworkcore.postgresql.7.0.11.nupkg.sha512",
+    "/home/codespace/.nuget/packages/npgsql/7.0.0/npgsql.7.0.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/npgsql.entityframeworkcore.postgresql/7.0.0/npgsql.entityframeworkcore.postgresql.7.0.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/system.codedom/4.4.0/system.codedom.4.4.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512"
   ],

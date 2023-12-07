@@ -16,11 +16,14 @@ namespace DataAccess.Concrete.EfCore
         }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Color> Colors { get; set; }
+        public DbSet<Model> Models { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
+       
 
     }
 }

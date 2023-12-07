@@ -1,0 +1,37 @@
+@model ModelListViewModel
+@{
+    ViewData["HeaderTitle"] = "Models";
+}
+<div class="container-fluid  px-2">
+    <div class="row">
+        <div class="col-3">
+            @await Component.InvokeAsync("ModelFilterMenu")
+        </div>
+        <div class="col-9">
+            <div class="site-section bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <h2 class="section-heading"><strong>Car Listings</strong></h2>
+                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        @foreach (var m in Model.Models)
+                        {
+                            <partial name="_ModelCard" model="m" />
+                        }
+                        <div page-model="@Model.Pagination" page-action="Index"></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+@section Header
+{
+    @await Html.PartialAsync("./Partials/_Header.cshtml")
+}

@@ -9,5 +9,6 @@ namespace Entities.Concrete
     public class Color:BaseEntity
     {
         public string? Name { get; set; }
+        public IEnumerable<Model> Models { get; set; }
     }
 }

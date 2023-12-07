@@ -1,0 +1,33 @@
+@model Model
+
+    <div class="col-md-6 col-lg-4 mb-4">
+
+        <div class="listing d-block  align-items-stretch">
+            <div class="listing-img h-100 mr-4">
+                <img src="images/car_6.jpg" alt="Image" class="img-fluid">
+            </div>
+            <div class="listing-contents h-100">
+                <h3>@Model.Brand?.Name - @Model.Name</h3>
+                <div class="rent-price">
+                    <strong>₺ @Model.DailyPrice</strong><span class="mx-1">/</span>Gün
+                </div>
+                <div class="d-block d-md-flex mb-3 mt-3 border-bottom  pb-3">
+                    <div class="listing-feature bg-light p-2 shadow rounded me-2">
+                        <strong class="caption me-1">Renk:</strong>
+                        <span class="number">@Model.Color?.Name</span>
+                    </div>
+                    <div class="listing-feature  p-2 shadow rounded me-2">
+                        <strong class="caption me-1">Kapasite:</strong>
+                        <span class="number">@Model.Capacity</span>
+                    </div>
+                   
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos eos at eum, voluptatem quibusdam.
+                    </p>
+                    <p><a href="#" class="btn btn-primary btn-sm">Rent Now</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>

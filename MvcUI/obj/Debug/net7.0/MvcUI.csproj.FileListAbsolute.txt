@@ -42,3 +42,8 @@
 /workspaces/RentACarMvc/MvcUI/bin/Debug/net7.0/Business.pdb
 /workspaces/RentACarMvc/MvcUI/obj/Debug/net7.0/MvcUI.csproj.CopyComplete
 /workspaces/RentACarMvc/MvcUI/bin/Debug/net7.0/libman.json
+/workspaces/RentACarMvc/MvcUI/bin/Debug/net7.0/Humanizer.dll
+/workspaces/RentACarMvc/MvcUI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
+/workspaces/RentACarMvc/MvcUI/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/workspaces/RentACarMvc/MvcUI/bin/Debug/net7.0/Mono.TextTemplating.dll
+/workspaces/RentACarMvc/MvcUI/bin/Debug/net7.0/System.CodeDom.dll
