@@ -1,30 +1,38 @@
 @model ModelListViewModel
 @{
-    ViewData["HeaderTitle"] = "Models";
+    ViewData["Title"] = "Models";
 }
-<div class="container-fluid  px-2">
+<div class="container-fluid ">
     <div class="row">
         <div class="col-3">
             @await Component.InvokeAsync("ModelFilterMenu")
+
         </div>
         <div class="col-9">
-            <div class="site-section bg-light">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-7">
-                            <h2 class="section-heading"><strong>Car Listings</strong></h2>
-                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            @if (Model.Models.Count() > 0)
+            {
+                <div class="site-section bg-light">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <h2 class="section-heading"><strong>Car Listings</strong></h2>
+                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            @foreach (var m in Model.Models)
+                            {
+                                <partial name="_ModelCard" model="m" />
+                            }
+                            <div page-model="@Model.Pagination" page-action="Index"></div>
                         </div>
                     </div>
-                    <div class="row">
-                        @foreach (var m in Model.Models)
-                        {
-                            <partial name="_ModelCard" model="m" />
-                        }
-                        <div page-model="@Model.Pagination" page-action="Index"></div>
-                    </div>
                 </div>
-            </div>
+            }
+            else
+            {
+                <div class="alert alert-info text-center mt-5 fs-3">Aradığınız kriterde araç bulunamadı!</div>
+            }
 
 
         </div>

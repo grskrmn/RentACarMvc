@@ -1,7 +1,9 @@
 @model List<Entities.Concrete.Brand>
-<ul class="list-group">
-    @foreach(var brand in Model)
-    {
-      <li class="list-group-item">@brand.Name</li>
-    }
-</ul>
+
+<select class="form-select form-select-lg  custom-select form-control" name="BrandName" aria-label="Large select example">
+  <option disabled selected>Marka Şeçiniz</option>
+  @foreach (var brand in Model)
+  {
+    <option selected="@(ViewBag.BrandName == brand.Name)" value="@brand.Name">@brand.Name</option>
+  }
+</select>

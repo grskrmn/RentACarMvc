@@ -22,6 +22,8 @@ namespace MvcUI.Controllers
 
         public IActionResult Index(ModelRequestParameter parameter)
         {
+            ViewBag.ColorName = parameter.ColorName is null ? null : parameter.ColorName;
+            ViewBag.BrandName = parameter.BrandName is null ? null : parameter.BrandName;
             var models = _service.GetAllModelsWithDetails(parameter);
             var pagination = new Pagination()
             {

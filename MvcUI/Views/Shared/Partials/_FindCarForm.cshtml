@@ -1,24 +1,25 @@
-<form class="trip-form">
+<form method="get" asp-action="Index" asp-controller="Model" class="trip-form">
 
      <div class="row align-items-center">
 
           <div class="mb-3 mb-md-0 col-md-3">
-               <select name="" id="" class="custom-select form-control">
+                @await Component.InvokeAsync("Brands")
+               @* <select name="" id="" class="custom-select form-control">
                     <option value="">Select Type</option>
                     <option value="">Ferrari</option>
                     <option value="">Toyota</option>
                     <option value="">Ford</option>
                     <option value="">Lamborghini</option>
-               </select>
+               </select> *@
           </div>
           <div class="mb-3 mb-md-0 col-md-3">
                <div class="form-control-wrap">
-                    <input type="date" id="start" class="form-control" name="trip-start" value="@DateTime.UtcNow.ToString("yyyy-MM-dd")" min="@DateTime.UtcNow.AddDays(1).ToString("yyyy-MM-dd")"  />
+                    <input type="date" id="start" class="form-control"  value="@DateTime.UtcNow.ToString("yyyy-MM-dd")" min="@DateTime.UtcNow.AddDays(1).ToString("yyyy-MM-dd")"  />
                </div>
           </div>
           <div class="mb-3 mb-md-0 col-md-3">
                <div class="form-control-wrap">
-                    <input type="date" id="start" class="form-control" name="trip-start" value="@DateTime.UtcNow.ToString("yyyy-MM-dd")" min="@DateTime.UtcNow.AddDays(1).ToString("yyyy-MM-dd")"  />
+                    <input type="date" id="start" class="form-control"  value="@DateTime.UtcNow.ToString("yyyy-MM-dd")" min="@DateTime.UtcNow.AddDays(1).ToString("yyyy-MM-dd")"  />
                </div>
           </div>
           <div class="mb-3 mb-md-0 col-md-3">

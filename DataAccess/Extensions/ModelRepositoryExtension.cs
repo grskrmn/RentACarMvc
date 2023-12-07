@@ -33,7 +33,7 @@ namespace DataAccess.Extensions
                 return models
                 .Include(x => x.Color)
                 .Include(x => x.Brand)
-                .Where(m => m.Color.Name == colorName && m.Brand.Name  == brandName);
+                .Where(m => m.Color.Name == colorName || m.Brand.Name  == brandName);
         }
 
 

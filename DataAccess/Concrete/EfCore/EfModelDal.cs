@@ -28,10 +28,10 @@ namespace DataAccess.Concrete.EfCore
                 return context.Models
                 .Include(x => x.Brand)
                 .Include(x => x.Color)
-                .FilteredBySearchTerm(modelRequest.SearchTerm)
-                .FilteredBrandNameAndColorName(modelRequest.BrandName, modelRequest.ColorName)
                 .FilteredBrandName(modelRequest.BrandName)
                 .FilteredColorName(modelRequest.ColorName)
+                .FilteredBySearchTerm(modelRequest.SearchTerm)
+                .FilteredBrandNameAndColorName(modelRequest.BrandName, modelRequest.ColorName)
                 .ToPaginate(modelRequest.PageNumber, modelRequest.PageSize)
                 .ToList();
             }
