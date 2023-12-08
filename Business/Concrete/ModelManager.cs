@@ -27,5 +27,10 @@ namespace Business.Concrete
         {
             return _modelDal.GetAllModelsWithDetails(parameter);
         }
+
+        public Model GetModelById(int id)
+        {
+            return _modelDal.Get(x => x.Id == id);
+        }
     }
 }

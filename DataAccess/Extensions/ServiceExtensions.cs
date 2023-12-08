@@ -15,6 +15,8 @@ namespace DataAccess.Extensions
             services.AddScoped<IBrandDal, EfBrandDal>();
             services.AddScoped<IColorDal, EfColorDal>();
             services.AddScoped<IModelDal, EfModelDal>();
+            services.AddScoped<IRentalDal, EfRentalDal>();
         }
+        
     }
 }

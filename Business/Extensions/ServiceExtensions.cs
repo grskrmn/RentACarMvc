@@ -15,6 +15,7 @@ namespace Business.Extensions
             services.AddScoped<IBrandService, BrandManager>();
             services.AddScoped<IColorService, ColorManager>();
             services.AddScoped<IModelService, ModelManager>();
+            services.AddScoped<IRentalService, RentalManager>();
         }
     }
 }

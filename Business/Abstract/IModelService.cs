@@ -10,6 +10,7 @@ namespace Business.Abstract
     public interface IModelService
     {
         List<Model> GetAllModels();
+        Model GetModelById(int id);
         List<Model> GetAllModelsWithDetails(ModelRequestParameter parameter);
     }
 }

@@ -1,0 +1,88 @@
+@page
+@model MvcUI.Pages.DetailModel
+@{
+    ViewData["Title"] = "DetailModel";
+    var carModel = Model.Cart.CartLine.Model;
+}
+
+<div class="container">
+    <div class="row justify-content-center text-center my-3">
+        <div class="col-7 text-center mb-5">
+            <h2>Car Details</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="d-flex justify-content-center rounded ">
+                <img src="images/car_6.jpg" alt="Image" class="img-fluid rounded shadow">
+            </div>
+            <div class="d-flex justify-content-center my-4">
+                <div class="d-flex row justify-content-center ms-2">
+                    <div class="col-md-5 "> <strong class="text-muted fs-5">Car Name: &nbsp;</strong> @carModel.Name
+                    </div>
+                    <div class="col-md-5 "> <strong class="text-muted fs-5">Daily Price: &nbsp;</strong>
+                        @carModel.DailyPrice</div>
+                    <div class="col-md-5"> <strong class="text-muted fs-5">Model Year: &nbsp;</strong>
+                        @carModel.ModelYear</div>
+                    <div class="col-md-5"> <strong class="text-muted fs-5">Capacity: &nbsp;</strong> @carModel.Capacity
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <form action="">
+                <div class="form-group my-3">
+                    <label>Rent Start Date</label>
+                    <input min="@Model.Cart.CartLine.StartDate.ToString("yyyy-MM-dd")" asp-for="@Model.Cart.CartLine.StartDate" type="date" class="form-control">
+                </div>
+                <div class="form-group my-3">
+                    <label>Rent End Date</label>
+                    <input type="date" min="@Model.Cart.CartLine.EndDate.ToString("yyyy-MM-dd")" asp-for="@Model.Cart.CartLine.EndDate" class="form-control" >
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-12 my-3 d-flex justify-content-between fs-4"><strong>Total
+                            Days:</strong> <span class="me-3">@Model.Cart.ComputeTotalValue()</span> </div>
+                    <div class="col-md-12 d-flex justify-content-between fs-4">
+                        <strong class="text-danger">Total:</strong> <span class="me-3"> ₺@(Model.Cart.ComputeTotalValue() * carModel.DailyPrice)</span></div>
+                </div>
+                 <button class="btn btn-primary w-100 my-3" type="submit">Check Out</button>
+            </form>
+        </div>
+    </div>
+
+    @section Header
+    {
+        @await Html.PartialAsync("./Partials/_Header.cshtml")
+    }
+
+    @section Scripts
+    {
+        <script>
+              const start = document.getElementById("Cart_CartLine_StartDate");
+              const end = document.getElementById("Cart_CartLine_EndDate");
+              start.addEventListener('change', (e) => {
+                   let date = new Date(start.value);
+                    date.setDate(date.getDate() + 1);
+
+                    let day = date.getDate();
+                    let month = date.getMonth() + 1;
+                    let year = date.getFullYear();
+
+                    if(day > 0 && day <= 9)
+                        day = '0' + day;
+                    if(month > 0 && month <= 9)
+                        month = '0' + month;
+
+                    let result = year + "-" + month + "-" + day;
+                  
+                    start.value = e.target.value;
+                    start.min = e.target.value;
+                  
+                    end.value = result;
+                    end.min = result;
+              })
+
+            
+
+        </script>
+    }

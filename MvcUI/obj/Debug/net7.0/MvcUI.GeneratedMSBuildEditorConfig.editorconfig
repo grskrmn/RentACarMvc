@@ -16,6 +16,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /workspaces/RentACarMvc/MvcUI
 build_property._RazorSourceGeneratorDebug = 
 
+[/workspaces/RentACarMvc/MvcUI/Pages/CheckOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2hlY2tPdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/RentACarMvc/MvcUI/Pages/DetailModel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRGV0YWlsTW9kZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/RentACarMvc/MvcUI/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/RentACarMvc/MvcUI/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/workspaces/RentACarMvc/MvcUI/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -16,6 +16,7 @@ namespace Entities.Concrete
         public string? Description { get; set; }
         public int Capacity { get; set; }
 
+        public IEnumerable<Rental> Rentals { get; set; }
         public Brand? Brand { get; set; }
         public Color? Color { get; set; }
     }
